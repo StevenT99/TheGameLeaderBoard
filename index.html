@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024 THE GAME LEADERBOARD</title>
+    <title>Podium Leaderboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,33 +13,20 @@
             color: white;
             text-align: center;
         }
-        
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
         }
         .gif-header {
-            position: relative;
-            width: 100%;
-            max-width: 800px; /* Adjust as necessary */
-            margin: 0 auto;
-            padding-bottom: 20px;
-            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
         }
-
         .gif-header img {
             max-width: 100%;
             height: auto;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        .gif-header img:nth-child(2),
-        .gif-header img:nth-child(3) {
-            width: 50px; /* Adjust the width as necessary */
+            display: inline-block;
+            margin-right: 10px;
         }
         .podium {
             display: flex;
@@ -80,6 +67,21 @@
         }
         .contenders th {
             background-color: #333;
+        }
+
+        /* Media Query for Mobile */
+        @media screen and (max-width: 600px) {
+            .gif-header img {
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+            .gif-header img:nth-child(2),
+            .gif-header img:nth-child(3) {
+                display: inline-block;
+                margin-right: 5px;
+                width: 50px;
+            }
         }
     </style>
 </head>
