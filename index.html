@@ -18,11 +18,27 @@
             margin: 20px auto;
             padding: 20px;
         }
-        .gif-header img {
+        .gif-header {
+            position: relative;
             width: 100%;
+            max-width: 800px; /* Adjust as necessary */
+            margin: 0 auto;
+            padding-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .gif-header img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .gif-header img:nth-child(2),
+        .gif-header img:nth-child(3) {
+            width: 50px; /* Adjust the width as necessary */
         }
         .podium {
             display: flex;
