@@ -27,10 +27,8 @@
             height: auto;
         }
         .gif-header img.character {
-            width: 45%; /* Adjusted for slightly bigger display */
-            max-width: 250px; /* Increased maximum width */
             height: auto;
-            display: inline-block; /* Ensure they are displayed inline on smaller screens */
+            display: inline-block; /* Ensure they are displayed inline */
         }
         .podium {
             display: flex;
@@ -76,18 +74,21 @@
         /* Media Query for Mobile */
         @media screen and (max-width: 600px) {
             .gif-header img.character {
-                width: 50%;
-                max-width: 190px;
+                width: 60%; /* Increase size on mobile */
+                margin: 0 auto 20px; /* Ensure vertical stacking with space */
             }
         }
 
-        /* Adjusted Media Query for Desktop */
+        /* Media Query for Desktop */
         @media screen and (min-width: 601px) {
+            .gif-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .gif-header img.character {
-                display: block; /* Changed to block to stack them */
-                width: auto; /* Auto width for natural image size */
-                max-width: 250px; /* Limiting max width */
-                margin: 10px auto; /* Centering the images */
+                width: 22%; /* Adjust to make them side by side */
+                margin: 20px 5px; /* Space between them and under the main gif */
             }
         }
     </style>
@@ -95,8 +96,11 @@
 <body>
     <div class="gif-header">
         <img src="hungergamesgif.gif" alt="Hunger Games">
-        <img src="mikey.png" alt="Mikey Debry" class="character">
-        <img src="preston.png" alt="Preston Hughes" class="character">
+        <!-- Ensuring images are placed under the main gif and side by side on desktop -->
+        <div>
+            <img src="mikey.png" alt="Mikey Debry" class="character">
+            <img src="preston.png" alt="Preston Hughes" class="character">
+        </div>
     </div>
     <div class="container">
         <div class="podium">
