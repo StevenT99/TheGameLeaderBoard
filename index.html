@@ -19,19 +19,23 @@
             padding: 20px;
         }
         .gif-header {
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .gif-header img {
             max-width: 100%;
             height: auto;
         }
+        .character-images {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
         .gif-header img.character {
-            width: 45%; /* Consistent size across all devices */
-            max-width: none; /* Removing the max-width restriction */
+            flex: 1; /* Allows images to grow and take equal space */
+            max-width: 50%; /* Maximum width of each character image */
             height: auto;
-            margin: 10px 5px; /* Adjust margin as needed for spacing */
-            display: inline-block; /* Ensure they are displayed inline */
         }
         .podium {
             display: flex;
@@ -78,8 +82,10 @@
 <body>
     <div class="gif-header">
         <img src="hungergamesgif.gif" alt="Hunger Games">
-        <img src="mikey.png" alt="Mikey Debry" class="character">
-        <img src="preston.png" alt="Preston Hughes" class="character">
+        <div class="character-images">
+            <img src="mikey.png" alt="Mikey Debry" class="character">
+            <img src="preston.png" alt="Preston Hughes" class="character">
+        </div>
     </div>
     <div class="container">
         <div class="podium">
