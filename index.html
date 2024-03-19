@@ -13,29 +13,38 @@
             color: white;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
         .gif-header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 10px; /* Reduced space below the character images */
         }
-        .gif-header img {
-            max-width: 100%;
-            height: auto;
-        }
+
         .character-images {
             display: flex;
             width: 100%;
             justify-content: center;
+            margin-top: -10px; /* Reduced space above the character images */
+            margin-bottom: -10px; /* Reduced space below the character images */
         }
+
+        .gif-header img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: -5px; /* Reduced space below the gif */
+        }
+
         .gif-header img.character {
             flex: 1; /* Allows images to grow and take equal space */
             max-width: 50%; /* Maximum width of each character image */
             height: auto;
+            margin: 0 5px; /* Adjusts space between character images */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 10px auto; /* Reduced top margin to bring content closer */
+            padding: 20px;
         }
         .podium {
             display: flex;
